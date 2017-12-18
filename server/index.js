@@ -13,7 +13,7 @@ var app = express();
 app.use(express.static(__dirname + '/../angular-client'));
 app.use(express.static(__dirname + '/../node_modules'));
 
-app.get('/', function (req, res) {
+app.get('/items', function (req, res) {
   items.selectAll(function(err, data) {
     if (err) {
       res.sendStatus(500);
@@ -22,12 +22,12 @@ app.get('/', function (req, res) {
     }
   });
 });
-
-app.listen(3000, function(err) {
+const port = process.env.PORT
+app.listen(port, function(err) {
   if (err) {
     console.error(err);
   } else {
-    console.log('listening on port 3000!');
+    console.log(`listening on port ${port}!`);
   }
 });
 
