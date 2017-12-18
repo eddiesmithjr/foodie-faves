@@ -17,28 +17,31 @@ Once the project moves into development, the press release can be used as a touc
  -->
  
 ## Heading ##
-  > Name the product in a way the reader (i.e. your target customers) will understand.
+  > FoodieFaves
 
 ## Sub-Heading ##
-  > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+  > Find the most popular dishes at your favorite restaurants!
 
 ## Summary ##
-  > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
+  > The FoodieFaves app will not only guide to the best eats in town, it will also tell you what those eats are!
+    Favorite dishes as voted by foodies like you are displayed in this app! 
 
 ## Problem ##
-  > Describe the problem your product solves.
+  > For those of us who love to go out to eat at the best restaurants, but can't decide on what to order once we're there.
 
 ## Solution ##
-  > Describe how your product elegantly solves the problem.
+  > Alleviates FOMO (fear of missing out), ensures that a customer's dining experience will be the best.
 
 ## Quote from You ##
-  > A quote from a spokesperson in your company.
+  > "FoodieFaves will revolutionize restaurant referral programs.
+    Every food joint will want to be a part of this." -Overzealous Salesman
 
 ## How to Get Started ##
-  > Describe how easy it is to get started.
+  > Just download the app and search for restaurants. The list of restaurants and their best dishes will come up.
 
 ## Customer Quote ##
-  > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
+  > "I love to go out to eat but I always have a hard time deciding what to order. It drives my husband crazy! 
+    Now that I have the FoodieFaves app, I don't have those problems anymore!" - Some Lady
 
 ## Closing and Call to Action ##
-  > Wrap it up and give pointers where the reader should go next.
+  > If you want to be a part of the FoodieFaves wave that is sweeping the country, download the FoodieFaves app now!
