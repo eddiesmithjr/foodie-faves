@@ -15,7 +15,7 @@ app.use(express.static(__dirname + '/../node_modules'));
 
 app.get('/items', function (req, res) {
   items.selectAll(function(err, data) {
-    if(err) {
+    if (err) {
       res.sendStatus(500);
     } else {
       res.json(data);
@@ -23,7 +23,11 @@ app.get('/items', function (req, res) {
   });
 });
 
-app.listen(3000, function() {
-  console.log('listening on port 3000!');
+app.listen(3000, function(err) {
+  if (err) {
+    console.error(err);
+  } else {
+    console.log('listening on port 3000!');
+  }
 });
 
