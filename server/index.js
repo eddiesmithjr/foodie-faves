@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3000;
 app.use(express.static(__dirname + '/../angular-client'));
 app.use(express.static(__dirname + '/../node_modules'));
 
-app.get('/items', function (req, res) {
+app.get('/', function (req, res) {
   items.selectAll(function(err, data) {
     if (err) {
       res.sendStatus(500);
