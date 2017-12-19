@@ -1,6 +1,5 @@
 var mongoose = require('mongoose');
-mongoose.connect(DBURL, { useMongoClient: true});
-// debugger;
+mongoose.connect(process.env.DBURL, {useMongoClient: true});
 var db = mongoose.connection;
 
 db.on('error', function(err) {
@@ -8,7 +7,7 @@ db.on('error', function(err) {
 });
 
 db.once('open', function() {
-  console.log('mongoose connected successfully at ${}');
+  console.log('mongoose connected successfully!');
 });
 
 var itemSchema = mongoose.Schema({

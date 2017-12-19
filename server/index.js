@@ -3,7 +3,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var items = require('../database-mongo');
 var app = express();
-const { PORT, DBURL }= process.env;
+const PORT = process.env || 3000;
 
 app.use(express.static(__dirname + '/../angular-client'));
 app.use(express.static(__dirname + '/../node_modules'));
@@ -18,7 +18,7 @@ app.get('/items', function (req, res) {
   });
 });
 
-app.listen(port, function(err) {
+app.listen(PORT, function(err) {
   if (err) {
     console.error(err);
   } else {

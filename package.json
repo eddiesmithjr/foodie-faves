@@ -9,11 +9,11 @@
   },
   "author": "Eddie Smith, Jr",
   "license": "ISC",
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "dependencies": {
     "angular": "^1.6.3",
     "body-parser": "^1.17.2",
+    "dotenv": "^4.0.0",
     "express": "^4.15.0",
     "jquery": "^3.1.1",
     "mongodb": "^3.0.0-rc0",
