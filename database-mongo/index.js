@@ -1,6 +1,6 @@
 require('dotenv').config();
 var mongoose = require('mongoose');
-mongoose.connect(process.env.DBURL, {useMongoClient: true});
+mongoose.connect(process.env.MONGODB_URI, {useMongoClient: true});
 var db = mongoose.connection;
 
 db.on('error', function(err) {
