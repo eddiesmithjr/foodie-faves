@@ -1,8 +1,9 @@
+require('dotenv').config();
 var express = require('express');
 var bodyParser = require('body-parser');
 var items = require('../database-mongo');
 var app = express();
-const port = process.env.PORT || 3000;
+const { PORT, DBURL }= process.env;
 
 app.use(express.static(__dirname + '/../angular-client'));
 app.use(express.static(__dirname + '/../node_modules'));
@@ -21,6 +22,6 @@ app.listen(port, function(err) {
   if (err) {
     console.error(err);
   } else {
-    console.log(`listening on port ${port}!`);
+    console.log(`listening on port ${PORT}!`);
   }
 });
