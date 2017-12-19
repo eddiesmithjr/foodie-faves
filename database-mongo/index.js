@@ -1,9 +1,11 @@
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/test');
-
+const dbUrl = process.env.DBURL || 'mongodb://localhost/test';
+mongoose.connect(dbUrl, { useMongoClient: true});
+// debugger;
 var db = mongoose.connection;
 
-db.on('error', function() {
+db.on('error', function(err) {
+  console.log(err);
   console.log('mongoose connection error');
 });
 

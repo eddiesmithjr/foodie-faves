@@ -1,15 +1,9 @@
 var express = require('express');
 var bodyParser = require('body-parser');
-// UNCOMMENT THE DATABASE YOU'D LIKE TO USE
-// var items = require('../database-mysql');
 var items = require('../database-mongo');
-
 var app = express();
+const port = process.env.PORT || 3000;
 
-// UNCOMMENT FOR REACT
-// app.use(express.static(__dirname + '/../react-client/dist'));
-
-// UNCOMMENT FOR ANGULAR
 app.use(express.static(__dirname + '/../angular-client'));
 app.use(express.static(__dirname + '/../node_modules'));
 
@@ -22,7 +16,7 @@ app.get('/items', function (req, res) {
     }
   });
 });
-const port = process.env.PORT
+
 app.listen(port, function(err) {
   if (err) {
     console.error(err);
@@ -30,4 +24,3 @@ app.listen(port, function(err) {
     console.log(`listening on port ${port}!`);
   }
 });
-
