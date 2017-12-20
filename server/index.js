@@ -7,7 +7,9 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 app.use(express.static(`${__dirname}/../angular-client`));
 app.use(express.static(`${__dirname}/../node_modules`));
+app.get('/', () => {
 
+})
 app.get('/faves', (req, res) => {
   console.log('Route hit!');
   items.selectAll((err, data) => {

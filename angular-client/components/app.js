@@ -1,16 +1,8 @@
 angular.module('app')
-  .controller('AppCtrl', () => {
-    this.getAll = (callback) => {
-      console.log('clicked!');
-      this.get('/faves')
-        .then(({ data }) => {
-          if (callback) {
-            callback(data);
-          }
-        })
-        .catch((err) => {
-          console.log('this is an app error ', err);
-        });
+  .controller('AppCtrl', function () {
+    this.getAll = (data) => {
+      console.log('clicked');
+      this.items = data;
     };
   })
   .component('app', {
