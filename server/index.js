@@ -1,16 +1,18 @@
 require('dotenv').config();
-var express = require('express');
-var bodyParser = require('body-parser');
-var items = require('../database-mongo');
-var app = express();
+const express = require('express');
+// const bodyParser = require('body-parser');
+const items = require('../database-mongo');
+
+const app = express();
 const PORT = process.env.PORT || 3000;
+app.use(express.static(`${__dirname}/../angular-client`));
+app.use(express.static(`${__dirname}/../node_modules`));
 
-app.use(express.static(__dirname + '/../angular-client'));
-app.use(express.static(__dirname + '/../node_modules'));
-
-app.get('/', function (req, res) {
-  items.selectAll(function(err, data) {
+app.get('/faves', (req, res) => {
+  console.log('Route hit!');
+  items.selectAll((err, data) => {
     if (err) {
+      console.log('this is a server error ', err);
       res.sendStatus(500);
     } else {
       res.json(data);
@@ -18,7 +20,7 @@ app.get('/', function (req, res) {
   });
 });
 
-app.listen(PORT, function(err) {
+app.listen(PORT, (err) => {
   if (err) {
     console.error(err);
   } else {

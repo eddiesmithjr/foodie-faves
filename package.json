@@ -9,7 +9,10 @@
   },
   "author": "Eddie Smith, Jr",
   "license": "ISC",
-  "devDependencies": {},
+  "devDependencies": {
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0"
+  },
   "dependencies": {
     "angular": "^1.6.3",
     "body-parser": "^1.17.2",

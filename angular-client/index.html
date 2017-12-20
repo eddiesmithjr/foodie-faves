@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title></title>
+<html ng-app='app'lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Foodie Faves</title>
+  </head>
+  <h1 ng-style="{'text-align': 'center', 'color': 'red'}">Welcome To Foodie Faves</h1>
   <script src="angular/angular.js"></script>
-</head>
-<body>
-  <div ng-app="app">
-    <app />
-  </div>
-  <script type="text/javascript" src="index.js"></script>
-  <script type="text/javascript" src="services/items.js"></script>
-  <script type="text/javascript" src="components/app.js"></script>
-  <script type="text/javascript" src="components/list.js"></script>
-  <script type="text/javascript" src="components/listItem.js"></script>
-</body>
+  <body>
+    <div>
+      <app />
+    </div>
+    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="components/app.js"></script>
+  </body>
 </html>

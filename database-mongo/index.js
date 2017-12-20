@@ -1,26 +1,28 @@
 require('dotenv').config();
-var mongoose = require('mongoose');
-mongoose.connect(process.env.MONGODB_URI, {useMongoClient: true});
-var db = mongoose.connection;
+const mongoose = require('mongoose');
 
-db.on('error', function(err) {
+mongoose.connect(process.env.MONGODB_URI, { useMongoClient: true });
+const db = mongoose.connection;
+
+db.on('error', (err) => {
   console.log('mongoose connection error ', err);
 });
 
-db.once('open', function() {
+db.once('open', () => {
   console.log('mongoose connected successfully!');
 });
 
-var itemSchema = mongoose.Schema({
+const itemSchema = mongoose.Schema({
   quantity: Number,
-  description: String
+  description: String,
 });
 
-var Item = mongoose.model('Item', itemSchema);
+const Item = mongoose.model('Item', itemSchema);
 
-var selectAll = function(callback) {
-  Item.find({}, function(err, items) {
-    if(err) {
+const selectAll = function (callback) {
+  Item.find({}, (err, items) => {
+    if (err) {
+      console.log('this is a db error ', err);
       callback(err, null);
     } else {
       callback(null, items);
